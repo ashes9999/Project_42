@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <style>
+    #doctor {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #doctor td, #doctor th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #doctor tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #doctor tr:hover {background-color: #ddd;}
+    
+    #doctor th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    </style>
+    </head><body>
+<table id = "doctor">
+  <thead> 
+    <th>Doctor ID</th>
+      <th>Doctor Name</th>
+      <th>Doctor's Username</th>
+      <th>Doctor's Specialization</th>
+      <th>Doctor's City</th>
+      <th>Doctor's State</th>
+      <th> Operations</th>
+ </thead>
+ <tbody>
+  <tr *ngIf="docs!=null">
+    <td>{{docs.doctorId}}</td>
+    <td>{{docs.doctorname}}</td>
+    <td>{{docs.username}}</td>
+    <td>{{docs.doctorspecialization}}</td>
+    <td>{{docs.doctorcity}}</td>
+    <td>{{docs.doctorstate}}</td>
+    <td><button class="btn btn-delete" (click)="deleteDoc(docs)">Delete</button></td>
+  </tr>
+  
+ </tbody>
+</table>
+</body>

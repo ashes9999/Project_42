@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+/* Top left text */
+.Image {
+    position: relative;
+    text-align: center;
+
+  }
+.app-root {
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    left: 16px;
+  }
+  

@@ -1,0 +1,14 @@
+<div class="appntmnt">
+<h2 class= "text-center"> Book Appointment </h2>
+<form>
+  <input [(ngModel)]="appointment.date" required type="datetime-local" id="datetime24" data-format="DD-MM-YYYY HH:mm" 
+  data-template="DD / MM / YYYY     HH : mm " name="datetime" ><br><br>
+  <input [(ngModel)]="appointment.doctorName" type="number"  class="form-control" id="patientID" /><br>
+    
+
+  <input [(ngModel)]="appointment.patientId" type="select" name ="doctor name" class="form-control" id="doctorName" >
+ 
+  <button class="btn btn-success" (click)="createAppointment()">Book</button>
+  
+</form>
+</div>
