@@ -1,5 +1,7 @@
 export class Appointment{
-    patientId: number;
-    doctorName: string;
-    date: Date;
+    patientname: string;
+    doctorname: string;
+    date: string;
+    time:string;
+
 }

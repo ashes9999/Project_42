@@ -1,14 +1,25 @@
-<div class="appntmnt">
-<h2 class= "text-center"> Book Appointment </h2>
-<form>
-  <input [(ngModel)]="appointment.date" required type="datetime-local" id="datetime24" data-format="DD-MM-YYYY HH:mm" 
-  data-template="DD / MM / YYYY     HH : mm " name="datetime" ><br><br>
-  <input [(ngModel)]="appointment.doctorName" type="number"  class="form-control" id="patientID" /><br>
+<div class="appointment">
+  <h2 class="text-center"> Book Appointment </h2><br>
+  <form name="myForm" action="submit">
+    <label for="spec">Select a Specialization:</label>
+    <select id="spec" [(ngModel)]="spec" (ngModelChange)="getDocs($event)"  name="spec" required>
+      <option value="Dentist">Dentist</option>
+      <option value="Psychiatrist">Psychiatrist</option>
+    </select><br><br>
+    <label for="exampleInput">Select a Doctor:</label>
+    <select name="doctorname" [(ngModel)]="appointment.doctorname" required>
+      <option *ngFor="let d of doctor" value="{{d.doctorname}}">{{d.doctorname}}</option>
+    </select><br><br>
+    <label for="exampleInput">Select a Date:</label>
+    <input type="date" id="exampleInput" name="input" [(ngModel)]="appointment.date" placeholder="yyyy-MM-dd"
+      min="2019-01-01" max="2019-12-31" required/><br><br>
     
-
-  <input [(ngModel)]="appointment.patientId" type="select" name ="doctor name" class="form-control" id="doctorName" >
+      <label for="exampleInput">Select Time:</label>
+    <select name="time" [(ngModel)]="appointment.time" required>
+      <option *ngFor="let t of tim" value="{{t}}">{{t}}</option>
+    </select><br>
+    <br><br>
+    <button class="btn btn-success" (click)="bookDoctor()">Book</button>
+  </form>
  
-  <button class="btn btn-success" (click)="createAppointment()">Book</button>
-  
-</form>
 </div>

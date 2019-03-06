@@ -1,3 +1,11 @@
-<p>
-  appointment works!
-</p>
+<div *ngIf="appointment.patientname">
+    <h5 class="text-primary">Your Appointment Information</h5>
+    <p>
+      <strong>Patient Name:</strong> {{appointment.patientname}}<br/>
+      <strong>Doctor Name:</strong> {{appointment.doctorname}}<br />
+      <strong>Date:</strong> {{appointment.date}}<br>
+      <strong>Time:</strong> {{appointment.time}}<br/>
+
+    </p>
+    <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
+    </div>

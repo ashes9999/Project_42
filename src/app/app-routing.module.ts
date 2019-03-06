@@ -11,6 +11,10 @@ import { AddPatientComponent } from './patient/add-patient/add-patient.component
 import { PatientComponent } from './patient/patient.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { AddDoctorComponent } from './doctor/add-doctor/add-doctor.component';
+import { AddAppointmentComponent } from './appointment/add-appointment/add-appointment.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { DocAppComponent } from './doctor/doc-app.component';
+
 
 const routes: Routes = [
     {
@@ -24,6 +28,14 @@ const routes: Routes = [
     {
         path:'user/patient-view',
         component: PatientComponent
+    },
+    {
+        path:'appointment',
+        component: AddAppointmentComponent
+    },
+    {
+        path:'appointment-view',
+        component: AppointmentComponent
     },
     {
         path:'pm/doctor-view',
@@ -52,6 +64,10 @@ const routes: Routes = [
     {
         path: 'signup',
         component: RegisterComponent
+    },
+    {
+        path: 'DocApp-view',
+        component: DocAppComponent
     },
     {
         path: '',

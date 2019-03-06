@@ -1,0 +1,11 @@
+<div *ngFor="let a of appointment">
+    <h5 class="text-primary">Your Appointment Information</h5>
+    <p>
+      <strong >Patient Name:</strong>  {{a.patientname}}<br/>
+      <strong>Doctor Name:</strong> {{a.doctorname}}<br />
+      <strong>Date:</strong> {{a.date}}<br>
+      <strong>Time:</strong> {{a.time}}<br/>
+
+    </p>
+    <button class="btn btn-secondary" (click)="cancel(any)">Cancel</button>
+    </div>

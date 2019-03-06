@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     .navbar{
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       width: 1516px;
     }
     ul{
       display: inline-block;
-      
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
       margin-left: 1px;
       margin-right: 20px;
     }
 ul li a{
-  
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   display: inline-block;
   margin-right: 20px;
   
@@ -40,7 +41,8 @@ ul li a{
         <li *ngIf="authority === 'user'" class="nav-item">
           <a class="nav-link" routerLink="user/patient">Patient Profile</a>
           <a class="nav-link" routerLink="user/patient-view">View Profile</a>
-          <a class="nav-link" routerLink="">Book Appointment </a>
+          <a class="nav-link" routerLink="appointment">Book Appointment </a>
+          <a class="nav-link" routerLink="appointment-view">View Appointment </a>
         </li>
         <li *ngIf="authority === 'admin'" class="nav-item">
           <a class="nav-link" routerLink="admin">Admin Board</a>
@@ -48,6 +50,7 @@ ul li a{
         <li *ngIf="authority === 'pm'" class="nav-item">
           <a class="nav-link" routerLink="pm/doctor">Doctor Profile</a>
           <a class="nav-link" routerLink="pm/doctor-view">View Profile</a>
+          <a class="nav-link" routerLink="DocApp-view">View Appointments </a>
         </li>
         <li *ngIf="!authority" class="nav-item">
           <a class="nav-link" routerLink="auth/login">Login</a>

@@ -20,6 +20,11 @@ import { PatientComponent } from './patient/patient.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { AddDoctorComponent } from './doctor/add-doctor/add-doctor.component';
 import { DoctorService } from './doctor/doctor.service';
+import { AddAppointmentComponent } from './appointment/add-appointment/add-appointment.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { AppointmentService } from './appointment/appointment.service';
+import { DocAppComponent } from './doctor/doc-app.component';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { DoctorService } from './doctor/doctor.service';
     AddPatientComponent,
     PatientComponent,
     DoctorComponent,
-    AddDoctorComponent
+    AddDoctorComponent,
+    AppointmentComponent,
+    AddAppointmentComponent,
+    DocAppComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +49,7 @@ import { DoctorService } from './doctor/doctor.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [httpInterceptorProviders,PatientService,DoctorService],
+  providers: [httpInterceptorProviders,PatientService,DoctorService,AppointmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

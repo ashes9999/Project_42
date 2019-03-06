@@ -10,8 +10,11 @@ import { Doctor } from 'src/app/models/doctor.model';
 })
 export class DoctorComponent implements OnInit {
  docs: Doctor[];
+
+ 
   constructor( private router: Router, private doctorService: DoctorService) {};
     ngOnInit(){ this.doctorService.getDoctors().subscribe((docs) => {console.log(docs);this.docs=docs;});
+    
     }
    deleteDoc(docs){
      this.doctorService.deleteDoctor(parseInt(docs.doctorId)).subscribe((data)=>{this.docs.splice(this.docs.indexOf(docs),1)})

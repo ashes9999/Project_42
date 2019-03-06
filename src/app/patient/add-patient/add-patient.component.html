@@ -5,40 +5,40 @@
     <div class="form-group">
       <label for="username">Patient Username: </label>
       <input [(ngModel)]="patient.username" placeholder="Patient's Username" name="username"  class="form-control"
-        id="patientusername" style="background-color: rgb(255, 0, 0); color: black;"/>
+        id="patientusername" style="background-color: rgb(255, 255, 255); color: black;"/>
 
     </div>
     <div class="form-group">
       <label for="patientheight">Patient Height: </label>
       <input background-color="black" type="height" [(ngModel)]="patient.height" placeholder="Patient's Height"
-        name="patientheight"  class="form-control" id="patientheight" style="background-color: rgb(255, 0, 0); color: black;"
+        name="patientheight"  class="form-control" id="patientheight" style="background-color: rgb(255, 255, 255); color: black;"
          />
     </div>
     <div class="form-group">
       <label for="weight">Patient Weight: </label>
       <input [(ngModel)]="patient.weight" placeholder="Weight" name="weight" class="form-control" id="weight"
-        style="background-color: rgb(255, 0, 0); color: black;" required>
+        style="background-color: rgb(255, 255, 255); color: black;" required>
     </div>
     <div class="form-group">
       <label for="Marital">Gender: </label>
       <input background-color="black" [(ngModel)]="patient.gender" placeholder="Status" name="status" 
-        class="form-control" id="status" style="background-color: rgb(255, 0, 0); color: black;" >
+        class="form-control" id="status" style="background-color: rgb(255, 255, 255); color: black;" >
     </div>
     
     <div class="form-group">
       <label for="patient_City">City: </label>
       <input [(ngModel)]="patient.patientCity" placeholder="Patient's City" name="patientcity"  class="form-control"
-        id="patientcity" style="background-color: rgb(255, 0, 0); color: black;" >
+        id="patientcity" style="background-color: rgb(255, 255, 255); color: black;" >
     </div>
     <div class="form-group">
       <label for="State">State: </label>
       <input [(ngModel)]="patient.patientState" placeholder="Patient's State" name="patientState"  class="form-control"
-        id="patientState" style="background-color: rgb(255, 0, 0); color: black;" >
+        id="patientState" style="background-color: rgb(255, 255, 255); color: black;" >
     </div>
     <div class="form-group">
       <label for="Problem">Problem: </label>
       <input [(ngModel)]="patient.patientProblem" placeholder="Problem" name="patientProblem" 
-        class="form-control" id="patientProblem" style="background-color: rgb(255, 0, 0); color: black;">
+        class="form-control" id="patientProblem" style="background-color: rgb(255, 255, 255); color: black;">
     </div>
     <button class="btn btn-success" (click)="createPatient()">Create</button>
 
