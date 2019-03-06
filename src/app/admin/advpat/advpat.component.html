@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <style>
+    #patients {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #patients td, #patient th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #patients tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #patients tr:hover {background-color: #ddd;}
+    
+    #patients th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: rgb(0, 0, 0);
+      color: white;
+    }
+    </style>
+    </head>
+<body>
+<table id="patients">
+  <thead>    
+      
+      <th>patient's Height</th>
+      <th>patient's Weight</th>
+      <th>patient's Username</th>
+      <th>patient's Gender</th>
+      <th>patient's City</th>
+      <th>patient's State</th>
+      <th>patient's Problem</th>
+      <th> Operations</th>
+ </thead>
+ <tbody>
+  <tr *ngFor="let pat of patient">
+    <td>{{pat.height}}</td>
+    <td>{{pat.weight}}</td>
+    <td>{{pat.username}}</td>
+    <td>{{pat.gender}}</td>
+    <td>{{pat.patientCity}}</td>
+    <td>{{pat.patientState}}</td>
+    <td>{{pat.patientProblem}}</td>
+    <td><button class="btn btn-delete" (click)="deletePatient(pat)">Delete</button></td>
+  </tr>
+  
+ </tbody>
+</table>
+
+</body>

@@ -17,7 +17,7 @@ export class DoctorComponent implements OnInit {
     
     }
    deleteDoc(docs){
-     this.doctorService.deleteDoctor(parseInt(docs.doctorId)).subscribe((data)=>{this.docs.splice(this.docs.indexOf(docs),1)})
+     this.doctorService.deleteDoctor(parseInt(docs.doctorId)).subscribe((data)=>{this.docs.splice(this.docs.indexOf(docs),1);})
    ;}
     
 }

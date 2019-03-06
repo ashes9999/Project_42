@@ -6,7 +6,7 @@ import { LoginComponent } from 'src/app/login.component';
 import { HomeComponent } from 'src/app/home.component';
 import { UserComponent } from 'src/app/user/pm/user.component';
 import { PmComponent } from 'src/app/user/pm/pm.component';
-import { AdminComponent } from 'src/app/user/pm/admin.component';
+import { AdminComponent } from 'src/app/admin/admin.component';
 import { AddPatientComponent } from './patient/add-patient/add-patient.component';
 import { PatientComponent } from './patient/patient.component';
 import { DoctorComponent } from './doctor/doctor.component';
@@ -14,6 +14,9 @@ import { AddDoctorComponent } from './doctor/add-doctor/add-doctor.component';
 import { AddAppointmentComponent } from './appointment/add-appointment/add-appointment.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { DocAppComponent } from './doctor/doc-app.component';
+import { AdvdocComponent } from './admin/advdoc/advdoc.component';
+import { AdvaptComponent } from './admin/advapt/advapt.component';
+import { AdvpatComponent } from './admin/advpat/advpat.component';
 
 
 const routes: Routes = [
@@ -68,6 +71,22 @@ const routes: Routes = [
     {
         path: 'DocApp-view',
         component: DocAppComponent
+    },
+    {
+        path: 'view/users',
+        component: AdminComponent
+    },
+    {
+        path: 'view/doctors',
+        component: AdvdocComponent
+    },
+    {
+        path: 'view/appointments',
+        component: AdvaptComponent
+    },
+    {
+        path: 'view/patients',
+        component: AdvpatComponent
     },
     {
         path: '',

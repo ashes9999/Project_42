@@ -11,7 +11,7 @@ import { LoginComponent } from 'src/app/login.component';
 import { HomeComponent } from 'src/app/home.component';
 import { UserComponent } from 'src/app/user/pm/user.component';
 import { PmComponent } from 'src/app/user/pm/pm.component';
-import { AdminComponent } from 'src/app/user/pm/admin.component';
+import { AdminComponent } from 'src/app/admin/admin.component';
  
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { AddPatientComponent } from './patient/add-patient/add-patient.component';
@@ -24,6 +24,10 @@ import { AddAppointmentComponent } from './appointment/add-appointment/add-appoi
 import { AppointmentComponent } from './appointment/appointment.component';
 import { AppointmentService } from './appointment/appointment.service';
 import { DocAppComponent } from './doctor/doc-app.component';
+import { AdminService } from './admin/admin.service';
+import { AdvdocComponent } from './admin/advdoc/advdoc.component';
+import { AdvpatComponent } from './admin/advpat/advpat.component';
+import { AdvaptComponent } from './admin/advapt/advapt.component';
 
 
 @NgModule({
@@ -41,7 +45,10 @@ import { DocAppComponent } from './doctor/doc-app.component';
     AddDoctorComponent,
     AppointmentComponent,
     AddAppointmentComponent,
-    DocAppComponent
+    DocAppComponent,
+    AdvdocComponent,
+    AdvpatComponent,
+    AdvaptComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +56,7 @@ import { DocAppComponent } from './doctor/doc-app.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [httpInterceptorProviders,PatientService,DoctorService,AppointmentService],
+  providers: [httpInterceptorProviders,PatientService,DoctorService,AppointmentService,AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

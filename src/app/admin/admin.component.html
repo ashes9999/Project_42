@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <style>
+    #users {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #users td, #users th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #users tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #users tr:hover {background-color: #ddd;}
+    
+    #users th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: rgb(0, 0, 0);
+      color: white;
+    }
+    </style>
+    </head><body>
+<table id = "users">
+  <thead> 
+    <th>users ID</th>
+      <th>users Name</th>
+      <th>users's Username</th>
+      <th>users's Email</th>
+      <th>users's Password</th>
+      
+      <th> Operations</th>
+ </thead>
+ <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.password}}</td>
+    
+    <td><button class="btn btn-delete" (click)="deleteUser(user)">Delete</button></td>
+  </tr>
+  
+ </tbody>
+</table>
+</body>

@@ -45,7 +45,10 @@ ul li a{
           <a class="nav-link" routerLink="appointment-view">View Appointment </a>
         </li>
         <li *ngIf="authority === 'admin'" class="nav-item">
-          <a class="nav-link" routerLink="admin">Admin Board</a>
+          <a class="nav-link" routerLink="view/users">View Users</a>
+          <a class="nav-link" routerLink="view/patients">View Patients</a>
+          <a class="nav-link" routerLink="view/doctors">View Doctors</a>
+          <a class="nav-link" routerLink="view/appointments">View Appointments</a>
         </li>
         <li *ngIf="authority === 'pm'" class="nav-item">
           <a class="nav-link" routerLink="pm/doctor">Doctor Profile</a>
