@@ -14,8 +14,15 @@ export class AdminComponent implements OnInit {
   constructor(private router: Router, private adminService: AdminService) { }
 
   ngOnInit() {
-    this.adminService.getUsers().subscribe((data)=>{console.log(data);this.users=data;
+    this.adminService.getUsers().subscribe((data) => {
+      console.log(data); this.users = data;
     });
-    }
   }
+  deleteUser(user) {
+    this.adminService.deleteUser(this.users[0].id).subscribe((data) => {
+      this.users
+      .splice(this.users.indexOf(this.users[0]), 1); alert('Deleted Successfully.');
+    });
+  }
+}
 

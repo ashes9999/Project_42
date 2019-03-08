@@ -14,8 +14,8 @@ const httpOptions = {
 @Injectable()
 export class AdminService{
 constructor(private token: TokenStorageService, private http:HttpClient){}
-private adminUrl='http://localhost:8080/';
-private adminUrl1='http://localhost:8080/pm/doctor/all';
+private adminUrl='http://javaaws-env-1.p4z2e2pugg.us-east-1.elasticbeanstalk.com/';
+private adminUrl1='http://javaaws-env-1.p4z2e2pugg.us-east-1.elasticbeanstalk.com/pm/doctor/all';
 private adminUrl2='http://localhost:8080/user/Appointment/all';
 private adminUrl3='http://localhost:8080/user/patient/all';
 public getUsers(): Observable<User[]>{
@@ -30,5 +30,7 @@ public getAppointments(): Observable<Appointment[]>{
 public getPatients(): Observable<Patient[]>{
     return this.http.get<Patient[]>(this.adminUrl3);
 }
-
+public  deleteUser(id:number): Observable<User[]>{
+    return this.http.delete<User[]>(this.adminUrl+'/'+id);
+}
 }
